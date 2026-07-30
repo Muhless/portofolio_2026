@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mode terang (default): latar putih, teks hitam. */
+:root {
+  --ink: #FAFAFA;
+  --paper: #0A0A0A;
+  --panel: #F2F2F0;
+  --line: #E2E0DB;
+  --muted: #6B6B68;
+}
+
+/* Mode gelap: nilai di atas dibalik lewat class .dark di <html>. */
+.dark {
+  --ink: #0A0A0A;
+  --paper: #FAFAFA;
+  --panel: #111111;
+  --line: #262626;
+  --muted: #8A8A8A;
+}
+
+::selection {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 1px solid #FAFAFA;
+  outline-offset: 4px;
+}
+
+/* Blinking terminal cursor */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret::after {
+  content: '';
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  background: currentColor;
+  margin-left: 0.2em;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+.route-row {
+  border-top: 1px solid var(--line);
+}
+.route-row:last-child {
+  border-bottom: 1px solid var(--line);
+}

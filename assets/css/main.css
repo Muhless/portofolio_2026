@@ -48,7 +48,7 @@ body {
 }
 
 .focus-ring:focus-visible {
-  outline: 1px solid #FAFAFA;
+  outline: 1px solid var(--paper);
   outline-offset: 4px;
 }
 

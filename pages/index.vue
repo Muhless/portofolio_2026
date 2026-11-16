@@ -6,20 +6,11 @@ const year = new Date().getFullYear();
 const projects = [
   {
     method: "GET",
-    path: "/projects/pg-pritani_qa",
-    status: "200 OK",
-    name: "Pritani — Rice Mill Management QA",
-    desc: "Quality assurance for a rice-milling management application covering farmers, customers, purchases, milling, stock, and sales across admin, operator, and cashier roles. Test design and Playwright automation in progress.",
-    stack: ["Playwright", "TypeScript", "PostgreSQL"],
-    link: "https://github.com/Muhless/pg_pritani_qa",
-  },
-  {
-    method: "GET",
-    path: "/projects/KAS_aesthetic_clinic",
+    path: "/projects/kas-aesthetic-clinic",
     status: "200 OK",
     name: "KAS Aesthetic Clinic — E2E Test Suite",
-    desc: "End-to-end test automation for a role-based clinic management system (admin, doctor, nurse). Covers authentication, patient management, and reservation flows, with session reuse via storageState and isolated parallel execution.",
-    stack: ["Playwright", "TypeScript", "E2E Testing", "MySQL"],
+    desc: "End-to-end test automation for a role-based clinic management system (admin, doctor, nurse). Covers authentication, patient management, and reservation flows, with page objects, reusable session state, and isolated test execution.",
+    stack: ["Selenium", "Java", "E2E Testing", "MySQL"],
     link: "https://github.com/Muhless/KAS_Aesthetic_Clinic",
   },
   {
@@ -27,32 +18,52 @@ const projects = [
     path: "/projects/pritani-qa",
     status: "200 OK",
     name: "Pritani — Rice Mill Management QA",
-    desc: "Quality assurance for a rice-milling management application covering farmers, customers, purchases, milling, stock, and sales across admin, operator, and cashier roles. Test design and Playwright automation in progress.",
-    stack: ["Playwright", "TypeScript", "PostgreSQL"],
-    link: "https://github.com/Muhless",
+    desc: "Quality assurance for a rice-milling application covering farmers, customers, purchases, milling, stock, and sales across admin, operator, and cashier roles. Risk-based test design, Selenium regression suites, and JMeter load tests on money- and stock-critical workflows.",
+    stack: ["Selenium", "JMeter", "PostgreSQL"],
+    link: "https://github.com/Muhless/pg_pritani_qa",
+  },
+  {
+    method: "GET",
+    path: "/projects/ady-trans-jaya-kotlin",
+    status: "200 OK",
+    name: "Ady Trans Jaya — Android Rental App",
+    desc: "Android car-rental app built with Kotlin and Jetpack Compose for owner, staff, and customer roles. E2E coverage with Appium: login and validation, role-based navigation, car management, booking lifecycle, and payment status flows.",
+    stack: ["Kotlin", "Appium", "Jetpack Compose", "JUnit 5"],
+    link: "https://github.com/Muhless/ady_trans_jaya.qa",
   },
 ];
 
 const skillGroups = [
   {
-    key: "automation",
-    values: ["Playwright", "Selenium", "Appium"],
-  },
-  {
-    key: "testing",
+    key: "manual",
     values: [
-      "Test Case Design",
       "Manual Testing",
-      "E2E Testing",
+      "Test Case Design",
+      "Test Scenario",
+      "Bug Reporting",
       "Regression Testing",
     ],
   },
-  { key: "api", values: ["REST API Testing", "JWT Auth", "Postman"] },
+  {
+    key: "automation",
+    values: ["Selenium", "Appium"],
+  },
+  {
+    key: "api",
+    values: ["Postman", "REST API Testing", "JWT Auth"],
+  },
+  {
+    key: "performance",
+    values: ["JMeter"],
+  },
   { key: "database", values: ["PostgreSQL", "MySQL"] },
-  { key: "tooling", values: ["JavaScript", "Docker", "Git", "Linux"] },
+  {
+    key: "tooling",
+    values: ["Java", "Go", "JavaScript", "Docker", "Git", "Linux"],
+  },
   {
     key: "documentation",
-    values: ["Test Plans", "Test Case", "Test Scenario", "Bug Reports"],
+    values: ["Test Plans", "Test Reports", "Bug Reports"],
   },
 ];
 
@@ -188,16 +199,16 @@ function toggleTheme() {
           Muhta Nuryadi
         </h1>
         <p class="mt-3 text-muted text-lg sm:text-xl">
-          QA Engineer · Test Automation
+          Junior QA Engineer · Manual &amp; Automation Testing
         </p>
 
         <div
           class="mt-10 border border-line bg-panel rounded-sm p-5 sm:p-6 text-[13px] leading-relaxed overflow-x-auto"
         >
           <pre class="whitespace-pre"><span class="text-muted">{</span>
-  <span class="text-muted">"role"</span>: <span class="text-paper">"QA Engineer / SDET"</span>,
-  <span class="text-muted">"focus"</span>: <span class="text-paper">"Test automation · E2E testing · Quality assurance"</span>,
-  <span class="text-muted">"stack"</span>: [<span class="text-paper">"Playwright", "TypeScript", "REST API", "PostgreSQL", "Docker"</span>],
+  <span class="text-muted">"role"</span>: <span class="text-paper">"Junior QA Engineer"</span>,
+  <span class="text-muted">"focus"</span>: <span class="text-paper">"Manual testing · Test automation · API testing"</span>,
+  <span class="text-muted">"stack"</span>: [<span class="text-paper">"Postman", "Selenium", "Appium", "JMeter", "SQL", "Git"</span>],
   <span class="text-muted">"status"</span>: <span class="text-paper">"open to QA opportunities"</span>
 <span class="text-muted">}</span></pre>
         </div>
@@ -228,18 +239,17 @@ function toggleTheme() {
         <p
           class="text-[15px] sm:text-base leading-[1.9] text-paper/90 max-w-2xl"
         >
-          I am a QA engineer focused on test automation and software quality. I
-          design structured test cases, build end-to-end test suites with
-          Playwright and TypeScript, and report defects with clear reproduction
-          steps so that teams can resolve them quickly.
+          I am a junior QA engineer focused on manual testing and test
+          automation. I write structured test cases and clear bug reports, build
+          end-to-end test suites with Selenium and Appium for web and Android,
+          test APIs with Postman, and run basic load tests with JMeter.
         </p>
         <p
           class="mt-4 text-[15px] sm:text-base leading-[1.9] text-paper/90 max-w-2xl"
         >
-          My undergraduate thesis covered a web-based clinic CRM built with the
-          Rapid Application Development methodology. Having worked on the
-          development side, I approach testing with an understanding of how
-          systems are built and where they are most likely to fail.
+          Having also worked on the development side, I approach testing with an
+          understanding of how systems are built and where they are most likely
+          to fail.
         </p>
       </section>
 

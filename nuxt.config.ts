@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   app: {
     head: {
+      htmlAttrs: { lang: 'en' },
       title: 'Muhta Nuryadi — Quality Assurance',
       meta: [
         { charset: 'utf-8' },
@@ -12,7 +13,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Muhta "Muhless" Nuryadi — Junior Backend Developer. Go, Gin, GORM, PostgreSQL, arsitektur berlapis.'
+            'Muhta "Muhless" Nuryadi — Junior QA Engineer. Manual testing, test automation with Selenium & Appium, API testing with Postman, and performance testing with JMeter.'
         }
       ],
       link: [

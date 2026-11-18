@@ -18,8 +18,8 @@ const projects = [
     path: "/projects/pritani-qa",
     status: "200 OK",
     name: "Pritani — Rice Mill Management QA",
-    desc: "Quality assurance for a rice-milling application covering farmers, customers, purchases, milling, stock, and sales across admin, operator, and cashier roles. Risk-based test design, Selenium regression suites, and JMeter load tests on money- and stock-critical workflows.",
-    stack: ["Selenium", "JMeter", "PostgreSQL"],
+    desc: "Quality assurance for a rice-milling application covering farmers, customers, purchases, milling, stock, and sales across admin, operator, and cashier roles. Risk-based test design, Playwright regression suites, and JMeter load tests on money- and stock-critical workflows.",
+    stack: ["Playwright", "JMeter", "PostgreSQL"],
     link: "https://github.com/Muhless/pg_pritani_qa",
   },
   {
@@ -46,7 +46,7 @@ const skillGroups = [
   },
   {
     key: "automation",
-    values: ["Selenium", "Appium"],
+    values: ["Playwright", "Appium"],
   },
   {
     key: "api",
@@ -241,7 +241,7 @@ function toggleTheme() {
         >
           I am a junior QA engineer focused on manual testing and test
           automation. I write structured test cases and clear bug reports, build
-          end-to-end test suites with Selenium and Appium for web and Android,
+          end-to-end test suites with Playwright and Appium for web and Android,
           test APIs with Postman, and run basic load tests with JMeter.
         </p>
         <p
